@@ -3,12 +3,20 @@ import Vue from 'vue'
 const vm = new Vue({
   data () {
     return {
-      user: ''
+      id: '',
+      name: ''
     }
   },
   computed: {
     isLogin (): boolean {
-      return !!this.user
+      return !!this.id
+    }
+  },
+  methods: {
+    register (name: string) {
+      // call api
+      this.name = name
+      this.id = 'id'
     }
   }
 })

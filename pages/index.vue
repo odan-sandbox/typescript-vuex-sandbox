@@ -35,6 +35,10 @@ import Logo from '~/components/Logo.vue'
 export default Vue.extend({
   components: {
     Logo
+  },
+  mounted () {
+    this.$rootStore.user.register('name')
+    this.$rootStore.tweet.tweet('Hello')
   }
 })
 </script>

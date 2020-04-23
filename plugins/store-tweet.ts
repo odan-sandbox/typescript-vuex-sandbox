@@ -3,8 +3,9 @@ import Vue from 'vue'
 const vm = new Vue({
   methods: {
     tweet (text: string) {
-      console.log(text)
-      console.log(this.$store.user.user)
+      const userId = this.$rootStore.user.id
+      // call api
+      console.log('tweet', userId, text)
     }
   }
 })
